@@ -1,0 +1,11 @@
+c:\users\jawad\source\repos\DocumentsManagment\DocumentsManagment\bin\Debug\netcoreapp2.0\DocumentsManagment.deps.json
+c:\users\jawad\source\repos\DocumentsManagment\DocumentsManagment\bin\Debug\netcoreapp2.0\DocumentsManagment.runtimeconfig.json
+c:\users\jawad\source\repos\DocumentsManagment\DocumentsManagment\bin\Debug\netcoreapp2.0\DocumentsManagment.runtimeconfig.dev.json
+c:\users\jawad\source\repos\DocumentsManagment\DocumentsManagment\bin\Debug\netcoreapp2.0\DocumentsManagment.dll
+c:\users\jawad\source\repos\DocumentsManagment\DocumentsManagment\obj\Debug\netcoreapp2.0\DocumentsManagment.csprojResolveAssemblyReference.cache
+c:\users\jawad\source\repos\DocumentsManagment\DocumentsManagment\obj\Debug\netcoreapp2.0\DocumentsManagment.csproj.CoreCompileInputs.cache
+c:\users\jawad\source\repos\DocumentsManagment\DocumentsManagment\obj\Debug\netcoreapp2.0\DocumentsManagment.AssemblyInfoInputs.cache
+c:\users\jawad\source\repos\DocumentsManagment\DocumentsManagment\obj\Debug\netcoreapp2.0\DocumentsManagment.AssemblyInfo.cs
+c:\users\jawad\source\repos\DocumentsManagment\DocumentsManagment\bin\Debug\netcoreapp2.0\DocumentsManagment.pdb
+c:\users\jawad\source\repos\DocumentsManagment\DocumentsManagment\obj\Debug\netcoreapp2.0\DocumentsManagment.dll
+c:\users\jawad\source\repos\DocumentsManagment\DocumentsManagment\obj\Debug\netcoreapp2.0\DocumentsManagment.pdb

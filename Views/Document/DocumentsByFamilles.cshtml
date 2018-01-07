@@ -1,0 +1,45 @@
+﻿@model DocumentsManagment.Dao.Famille
+@{
+    ViewData["Title"] = "DocumentByFamille";
+}
+
+<h2>Liste des documents par famille</h2>
+
+<form method="post" asp-action="DocumentsByFamilles">
+    <div class="row">
+        <label class="col-md-2">Famille : </label>
+        <div class="col-md-6">
+            <select class="form-control" asp-for="FamilleID" asp-items="ViewBag.ListFamilles" onchange="this.form.submit()">
+                <option selected value="-1">Choisissez une famille</option>
+            </select>
+        </div>
+    </div>
+    
+</form>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Document ID</th>
+            <th>Nom</th>
+            <th>Taille</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (ViewBag.Documents.Count == 0)
+        {
+        <tr> 
+            <td class="text-center bg-warning" colspan="3">Aucune resultat</td>
+        </tr>
+        }
+        @foreach (var D in ViewBag.Documents)
+    {
+        <tr>
+            <td>@D.DocumentId</td>
+            <td>@D.Nom</td>
+            <td>@D.Taille MB</td>
+
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,45 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model DocumentsManagment.Dao.Document
+@{
+}
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h3 class="panel-title"><strong>Ajouter un document</strong></h3></div>
+            <div class="panel-body">
+
+                <form role="form" asp-action="SaveDocument" method="post">
+                    <div class="form-group">
+                        <label for="Description">Famille</label>
+                        <select name="FamilleID" class="form-control">
+                            @{
+                                foreach (var famille in ViewBag.Familles)
+                                {
+                                    <option value="@famille.FamilleID">@famille.Nom</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="Nom">Nom</label>
+                        <input name="Nom" type="text" class="form-control" id="Nom">
+                        @Html.ValidationMessageFor(p => p.Nom, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label for="Taille">Taille (en MB)</label>
+                        <input name="Taille" type="number" class="form-control" id="Taille">
+                        @Html.ValidationMessageFor(p => p.Taille, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label for="Format">Format</label>
+                        <input name="Format" type="text" class="form-control" id="Format">
+                        @Html.ValidationMessageFor(p => p.Format, "", new { @class = "text-danger" })
+                    </div>
+                    <button type="submit" class="btn btn-sm btn-success">Enregistrer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

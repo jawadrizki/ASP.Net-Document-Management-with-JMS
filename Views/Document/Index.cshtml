@@ -1,0 +1,66 @@
+﻿@model IEnumerable<DocumentsManagment.Dao.Document>
+@{
+    ViewData["title"] = "Mes Documents";
+}
+<h1>Mes Documents</h1>
+<form asp-action="Index" method="get">
+
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-2">
+                <label for="search">Cherecher un document</label>
+            </div>
+            <div class="col-md-5">
+                <input class="form-control" type="text" name="keyword" value="@ViewBag.keyword" />
+            </div>
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary btn-sm">Chercher</button>
+            </div>
+            <div class="col-md-2">
+                <a class="btn btn-success btn-sm" asp-action="AddDocument">Ajouter un document</a>
+            </div>
+        </div>
+    </div>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.DocumentId)</th>
+            <th>@Html.DisplayNameFor(model => model.Nom)</th>
+            <th>@Html.DisplayNameFor(model => model.Taille)</th>
+            <th>@Html.DisplayNameFor(model => model.Famille)</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => p.DocumentId)</td>
+                <td>@Html.DisplayFor(modelItem => p.Nom)</td>
+                <td>@Html.DisplayFor(modelItem => p.Taille) MB</td>
+                <td>@Html.DisplayFor(modelItem => p.Famille.Nom)</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <ul class="pagination">
+        @{
+            for (int i = 0; i <= ViewBag.totalPages; i++)
+            {
+                String className = "";
+                if (i == ViewBag.CurrentPage)
+                {
+                    className = "active";
+                }
+                <li class="page-item @className">
+                    <a class="page-link" asp-action="Index" asp-route-page="@i" asp-route-keyword="@ViewBag.keyword">@i</a>
+
+                </li>
+            }
+        }
+    </ul>
+</div>
